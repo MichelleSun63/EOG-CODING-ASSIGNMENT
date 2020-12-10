@@ -13,7 +13,7 @@ const httpLink = new HttpLink({ // querys
   uri: 'https://react.eogresources.com/graphql',
 });
 
-//// subcrip the data
+//// subcript the data
 const websocketLink = new WebSocketLink({ 
   uri: 'wss://react.eogresources.com/graphql',
   options: {

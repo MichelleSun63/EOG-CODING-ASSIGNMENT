@@ -1,17 +1,17 @@
 export interface DataStateSchema{
-    flareTemp:any
-    waterTemp:any
-    casingPressure:any
-    oilTemp:any
-    tubingPressure:any
-    injValveOpen:any
+    flareTemp:number|null
+    waterTemp:number|null
+    casingPressure:number|null
+    oilTemp:number|null
+    tubingPressure:number|null
+    injValveOpen:number|null
     /////////////////////
-    lastFlareTemp:any
-    lastWaterTemp :any
-    lastCasingPressure:any
-    lastOilTemp:any
-    lastTubingPressure:any
-    lastInjValveOpen:any
+    lastFlareTemp:number|null
+    lastWaterTemp :number|null
+    lastCasingPressure:number|null
+    lastOilTemp:number|null
+    lastTubingPressure:number|null
+    lastInjValveOpen:number|null
     
     
 }

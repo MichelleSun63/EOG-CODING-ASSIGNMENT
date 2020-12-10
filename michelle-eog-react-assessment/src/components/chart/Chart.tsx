@@ -15,16 +15,31 @@ const useStyles = makeStyles({
     },
   });
 
-  
+ interface Props{
+    flareTemp ? : any,
+    waterTemp ? : any,
+    casingPressure ? : any,
+    oilTemp ? : any,
+    tubingPressure ? : any,
+    injValveOpen ? : any,
+   
+    flareTempBtn ? : any,
+    waterTempBtn ? : any,
+    casingPressureBtn ? : any,
+    oilTempBtn ? : any,
+    tubingPressureBtn ? : any,
+    injValveOpenBtn ? : any,
+    addSavedStatus:any
+ }
 
-const Chart = (props ) =>{
+const Chart = (props:Props ) =>{
     const styles = useStyles();
     const [charData, setCharData] = useState([])
     //chagne the data format to the recharts format
     //loop throught all the data
     useEffect(() => {
-        let tempArray  = []
-        props.flareTemp.forEach((item ,index )=>{
+        let tempArray:any = []
+        props.flareTemp.forEach((item:any ,index:number )=>{
             let tempSingleData = {
                 name: item.at,
                 flareTemp : item.value,
@@ -64,7 +79,7 @@ const Chart = (props ) =>{
 }
 
 
-const mapStatetoProps = (state ) =>{
+const mapStatetoProps = (state:RootState ) =>{
     return {
          
         flareTemp : state.dataReducer.flareTemp,
@@ -73,7 +88,7 @@ const mapStatetoProps = (state ) =>{
         oilTemp : state.dataReducer.oilTemp,
         tubingPressure : state.dataReducer.tubingPressure,
         injValveOpen : state.dataReducer.injValveOpen,
-        //////////display status of the data
+       
         flareTempBtn : state.statusReducer.flareTemp,
         waterTempBtn : state.statusReducer.waterTemp,
         casingPressureBtn : state.statusReducer.casingPressure,
@@ -81,12 +96,12 @@ const mapStatetoProps = (state ) =>{
         tubingPressureBtn : state.statusReducer.tubingPressure,
         injValveOpenBtn : state.statusReducer.injValveOpen,
          
-      //  savedStatus : state.statusReducer.savedStatus
+      
   
     }
   }
   
-  const mapDispatchToProps = (dispatch )  =>
+  const mapDispatchToProps = (dispatch:any)  =>
         bindActionCreators({
             addSavedStatus
         },dispatch)

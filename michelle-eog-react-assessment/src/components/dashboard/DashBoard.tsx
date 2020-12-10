@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client"
-import React, {Dispatch, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import { getMultipleMeasurementsQuery} from "../../store/query/queries"
 import {storeChar,StoreChar} from '../../store/actions/dataActions'
 import { connect} from 'react-redux';
