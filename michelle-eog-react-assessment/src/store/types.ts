@@ -12,7 +12,8 @@ export interface DataStateSchema{
     lastOilTemp:number|null
     lastTubingPressure:number|null
     lastInjValveOpen:number|null
-    
+    savedData:any
+    savedStatus:number
     
 }
 
@@ -23,6 +24,7 @@ export interface StatusStateSchema{
     oilTemp:  boolean
     tubingPressure:  boolean
     injValveOpen: boolean
+  
 }
 
 export const DATA_STATE_SCHEMA='DATA_STATE_SCHEMA';

@@ -46,17 +46,17 @@ const mapResultsToProps=(result:any)=>{
 }
 
 //use the raphql to fetch the data's with the apollo
-graphql(getNewMeasurement,{props:mapResultsToProps})
+//graphql(getNewMeasurement,{props:mapResultsToProps})
 
 const mapStatetoProps = (state:RootState) =>{
     return {
       flareTemp : state.dataReducer.flareTemp,
-      waterTemp :state.dataReducer.waterTemp,
-      casingPressure : state.dataReducer.casingPressure,
-      oilTemp : state.dataReducer.oilTemp,
-      tubingPressure : state.dataReducer.tubingPressure,
-      injValveOpen : state.dataReducer.injValveOpen,
-      lastFlareTemp : state.dataReducer.lastFlareTemp
+    waterTemp :state.dataReducer.waterTemp,
+    casingPressure : state.dataReducer.casingPressure,
+    oilTemp : state.dataReducer.oilTemp,
+    tubingPressure : state.dataReducer.tubingPressure,
+    injValveOpen : state.dataReducer.injValveOpen,
+    lastFlareTemp : state.dataReducer.lastFlareTemp
     }
   }  
  

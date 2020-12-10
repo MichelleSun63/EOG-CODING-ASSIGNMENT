@@ -7,6 +7,7 @@ const initialState:StatusStateSchema  ={
     oilTemp: true,
     tubingPressure: true,
     injValveOpen: true,
+
   }
   
 const statusReducer = (state = initialState, action:any) =>{
@@ -15,16 +16,16 @@ const statusReducer = (state = initialState, action:any) =>{
      
         case 'SWITCH_BTN_STATUS' :
             return {
-            ...state,
-            flareTemp: action.ctx === "flareTemp" ? !state.flareTemp : state.flareTemp,
-            waterTemp: action.ctx  === "waterTemp" ?  !state.waterTemp  : state.waterTemp,
-            casingPressure: action.ctx  === "casingPressure" ? !state.casingPressure  : state.casingPressure,
-            oilTemp: action.ctx === "oilTemp" ? !state.oilTemp : state.oilTemp,
-            tubingPressure: action.ctx  === "tubingPressure" ? !state.tubingPressure  : state.tubingPressure,
-            injValveOpen: action.ctx === "injValveOpen" ? !state.injValveOpen : state.injValveOpen,
-            }
-        default:
-            return state
+              ...state,
+              flareTemp: action.payload === "flareTemp" ? !state.flareTemp : state.flareTemp,
+              waterTemp: action.payload  === "waterTemp" ?  !state.waterTemp  : state.waterTemp,
+              casingPressure: action.payload  === "casingPressure" ? !state.casingPressure  : state.casingPressure,
+              oilTemp: action.payload  === "oilTemp" ? !state.oilTemp : state.oilTemp,
+              tubingPressure: action.payload  === "tubingPressure" ? !state.tubingPressure  : state.tubingPressure,
+              injValveOpen: action.payload  === "injValveOpen" ? !state.injValveOpen : state.injValveOpen,
+              }
+          default:
+              return state
       }
 }
   

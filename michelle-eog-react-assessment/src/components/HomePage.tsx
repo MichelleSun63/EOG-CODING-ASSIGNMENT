@@ -1,5 +1,6 @@
 import React, { Dispatch } from 'react';
-import DashBoard from "./dashboard/DashBoard" 
+import DashBoard from "./dashboard/DashBoard";
+ 
 
 import { connect} from 'react-redux';
 import { AnyAction, bindActionCreators } from 'redux';
@@ -12,7 +13,10 @@ interface Props {
     return (
         <div>
           {props.lastInjValveOpen!==null?
-          <DashBoard/>:
+          <div>
+          <DashBoard/>
+       
+          </div>:
           <div>Page is Loading<br/>
                   Thanks for your patient!
                   </div>}

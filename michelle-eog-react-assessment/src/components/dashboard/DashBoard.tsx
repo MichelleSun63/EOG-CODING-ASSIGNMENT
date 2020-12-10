@@ -5,6 +5,7 @@ import {storeChar,StoreChar} from '../../store/actions/dataActions'
 import { connect} from 'react-redux';
 import {RootState}from "../../store/reducers/index"
 import { ActionCreatorsMapObject, AnyAction, bindActionCreators } from 'redux';
+import Record from "../record/Record"
 import ToggleBtn from "../button/ToggleBtn"
 import Chart from "../chart/Chart"
  
@@ -15,7 +16,7 @@ interface Props{
     oilTemp ?: any;
     tubingPressure ?: any;
     injValveOpen ?: any;
-    //////////latst data
+ 
     lastFlareTemp ?: any;
     lastWaterTemp ?: any;
     lastCasingPressure?: any;
@@ -28,7 +29,7 @@ interface Props{
 function DashBoard<T>(props:Props){
   //set the after to 30 min before
   let msOfMinute = 60000;
-  //after is the time after 30 MinS
+  
   const after = new Date(props.lastInjValveOpen.at - 30 * msOfMinute).valueOf(); 
   const input = [
     {
@@ -118,6 +119,7 @@ function DashBoard<T>(props:Props){
       return (<div>
             <ToggleBtn /> 
             <Chart />
+            <Record/>
       </div>)
       }else{
         return <div>Page is Loading<br/>

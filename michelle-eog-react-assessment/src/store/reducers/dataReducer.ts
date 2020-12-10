@@ -14,6 +14,9 @@ const initialState:DataStateSchema ={
     lastOilTemp:null,
     lastTubingPressure:null,
     lastInjValveOpen:null,
+
+    savedData:[],
+    savedStatus:0
   }
 
   
@@ -44,10 +47,39 @@ const initialState:DataStateSchema ={
                 tubingPressure: action.ctx.name  === "tubingPressure" ? action.ctx.array  : state.tubingPressure,
                 injValveOpen: action.ctx.name  === "injValveOpen" ? action.ctx.array  : state.injValveOpen,
               }
-               
+
+              case 'DELETE_SAVE':
+                console.log("context",action.ctx)
+              return {
+                ...state,
+                savedData: [...state.savedData.filter((item:any) => item !== action.ctx)]
+              }
+            //add a data to save list  
+            case 'ADD_SAVE' :
+                if (state.savedData.length === 6 ) {
+                    let newArray = JSON.parse(JSON.stringify(state.savedData))
+                    newArray.push(action.ctx)
+                    newArray.shift()
+                    return {
+                        ...state,
+                        savedData : newArray
+                    }
+                } 
+                return {
+                    ...state,
+                    savedData : [...state.savedData, action.ctx]
+              }
+            //add 1 on counter    
+            case 'ADD_SAVED_STATUS' : 
+              return {
+                  ...state,
+                savedStatus : state.savedStatus+1
+              }
           default:
               return state
       }
+               
+          
   }
   
   export default dataReducer; 

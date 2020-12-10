@@ -29,7 +29,10 @@ const useStyles = makeStyles({
     oilTempBtn ? : any,
     tubingPressureBtn ? : any,
     injValveOpenBtn ? : any,
+    savedStatus:any,
     addSavedStatus:any
+    
+         
  }
 
 const Chart = (props:Props ) =>{
@@ -81,21 +84,22 @@ const Chart = (props:Props ) =>{
 
 const mapStatetoProps = (state:RootState ) =>{
     return {
-         
         flareTemp : state.dataReducer.flareTemp,
         waterTemp :state.dataReducer.waterTemp,
         casingPressure : state.dataReducer.casingPressure,
         oilTemp : state.dataReducer.oilTemp,
         tubingPressure : state.dataReducer.tubingPressure,
         injValveOpen : state.dataReducer.injValveOpen,
-       
+        //////////display status
         flareTempBtn : state.statusReducer.flareTemp,
         waterTempBtn : state.statusReducer.waterTemp,
         casingPressureBtn : state.statusReducer.casingPressure,
         oilTempBtn : state.statusReducer.oilTemp,
         tubingPressureBtn : state.statusReducer.tubingPressure,
         injValveOpenBtn : state.statusReducer.injValveOpen,
-         
+        //////////counter
+     
+        savedStatus : state.dataReducer.savedStatus
       
   
     }
