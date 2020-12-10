@@ -67,7 +67,7 @@ const mapStatetoProps = (state:RootState) =>{
         tubingPressureBtn : state.statusReducer.tubingPressure,
         injValveOpenBtn : state.statusReducer.injValveOpen,
       
-        savedStatus : state.dataReducer.savedStatus
+         savedStatus : state.dataReducer.savedStatus
   
     }
   }

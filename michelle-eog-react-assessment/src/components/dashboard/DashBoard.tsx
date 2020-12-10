@@ -120,6 +120,7 @@ function DashBoard<T>(props:Props){
             <ToggleBtn /> 
             <Chart />
             <Record/>
+       
       </div>)
       }else{
         return <div>Page is Loading<br/>

@@ -17,12 +17,12 @@ const useStyles = makeStyles({
   });
 
   interface Props{
-    lastFlareTemp ?: number|null
-      lastWaterTemp ?: number|null
-      lastCasingPressure?: number|null
-      lastOilTemp?: number|null
-      lastTubingPressure?: number|null
-      lastInjValveOpen?:number|null
+    lastFlareTemp ?: any
+      lastWaterTemp ?: any
+      lastCasingPressure?: any
+      lastOilTemp?: any
+      lastTubingPressure?: any
+      lastInjValveOpen?: any
   }
 const ToggleBtn = (props:Props) =>{
     const styles = useStyles();

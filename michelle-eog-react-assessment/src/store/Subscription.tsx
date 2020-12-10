@@ -10,13 +10,13 @@ import {useSubscription} from '@apollo/react-hooks';
 import {getNewMeasurement} from "./query/queries" ;
 
 interface Props{
-  flareTemp ?: number|null
-  waterTemp ?:number|null
-  casingPressure ?: number|null
-  oilTemp ?: number|null
-  tubingPressure ?: number|null
-  injValveOpen ?: number|null
-  lastFlareTemp ?: number|null
+  flareTemp ?: any
+  waterTemp ?:any
+  casingPressure ?:any
+  oilTemp ?:any
+  tubingPressure ?: any
+  injValveOpen ?: any
+  lastFlareTemp ?: any
   storeSubscription?:any
  }
 

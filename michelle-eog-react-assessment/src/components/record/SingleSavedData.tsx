@@ -20,7 +20,7 @@ const SingleSavedData = (props:any) => {
     const realTime = new Date(props.data.name).toLocaleTimeString()
 return (
     <div >
-         <div className={styles.container}>
+         <div className={styles.container} >
             <h4>{realTime}</h4>
             <p>FlareTemp: {props.data.flareTemp} F</p>
             <p>WaterTemp: {props.data.waterTemp} F</p>

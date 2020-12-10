@@ -29,8 +29,8 @@ const useStyles = makeStyles({
     oilTempBtn ? : any,
     tubingPressureBtn ? : any,
     injValveOpenBtn ? : any,
-    savedStatus:any,
-    addSavedStatus:any
+    savedStatus?:any,
+    addSavedStatus?:any
     
          
  }

@@ -1,7 +1,5 @@
 import React, { Dispatch } from 'react';
 import DashBoard from "./dashboard/DashBoard";
- 
-
 import { connect} from 'react-redux';
 import { AnyAction, bindActionCreators } from 'redux';
 import {RootState}from "../store/reducers/index";
@@ -15,7 +13,6 @@ interface Props {
           {props.lastInjValveOpen!==null?
           <div>
           <DashBoard/>
-       
           </div>:
           <div>Page is Loading<br/>
                   Thanks for your patient!

@@ -31,12 +31,12 @@ const useStyles = makeStyles({
   });
 
   interface Props{
-    flareTemp?: number
-    waterTemp ?: number
-    casingPressure?: number
-    oilTemp?: number
-    tubingPressure?: number
-    injValveOpen?: number
+    flareTemp?: any
+    waterTemp ?: any
+    casingPressure?: any
+    oilTemp?: any
+    tubingPressure?: any
+    injValveOpen?: any
     switchBtnStatus?:any
     info?:any
 }

@@ -14,9 +14,8 @@ const initialState:DataStateSchema ={
     lastOilTemp:null,
     lastTubingPressure:null,
     lastInjValveOpen:null,
-
     savedData:[],
-    savedStatus:0
+    savedStatus: 0 
   }
 
   
@@ -47,9 +46,8 @@ const initialState:DataStateSchema ={
                 tubingPressure: action.ctx.name  === "tubingPressure" ? action.ctx.array  : state.tubingPressure,
                 injValveOpen: action.ctx.name  === "injValveOpen" ? action.ctx.array  : state.injValveOpen,
               }
-
               case 'DELETE_SAVE':
-                console.log("context",action.ctx)
+                console.log("ctx",action.ctx)
               return {
                 ...state,
                 savedData: [...state.savedData.filter((item:any) => item !== action.ctx)]
@@ -75,11 +73,10 @@ const initialState:DataStateSchema ={
                   ...state,
                 savedStatus : state.savedStatus+1
               }
+               
           default:
               return state
       }
-               
-          
   }
   
   export default dataReducer; 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SingleSavedData from "./SingleSavedData";
 import line from "./line.png";
-import {RootState}from "../../store/reducers/index";
+import {RootState} from "../../store/reducers/index";
 
 const useStyles = makeStyles({
     container: {
